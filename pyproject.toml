@@ -6,7 +6,7 @@ authors = ["Mark Baggett <markpbaggett@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11 || ^3.12"
 bottle = "^0.12.25"
 ibis = "^3.3.0"
 gunicorn = "^22.0.0"
