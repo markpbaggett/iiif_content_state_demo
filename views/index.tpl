@@ -33,9 +33,9 @@
                 </form>
             % else:
                 <form action="/" method="post">
-                    <br/>
-                    <label class="text-center text-secondary" style="padding-bottom: 20px;">{{data['example']['text']}}</label>
-                    <br/>
+                    <div style="padding-bottom: 20px;">
+                    <label class="text-center text-accent">{{data['example']['text']}}</label>
+                    </div>
                     <textarea class="textarea textarea-bordered" placeholder="{{ data['example']['body'] }}" name="field" rows="10" cols="50">{{ data['example']['body'] }}</textarea>
                     <br/>
                     <button class="btn btn-primary" type="submit">Submit</button>
