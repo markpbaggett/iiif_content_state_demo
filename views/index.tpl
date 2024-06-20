@@ -11,21 +11,27 @@
     <div class="container mx-auto">
         <h1 class="text-4xl text-center">IIIF Content State Demo</h1>
         <p class="mt-4 text-center">Add IIIF content and load it in Clover with Content State</p>
-        <!-- Open the modal using ID.showModal() method -->
         <div class="text-center">
             % if data['show_results']:
-                <div class="card w-96 bg-base-100 shadow-xl text-center">
-                  <div class="card-body text-center">
-                    <h2 class="card-title">Success</h2>
-                    <p><a href="{{data['results']}}">See Item in Clover</a></p>
-                    <div class="card-actions justify-end">
-                      <button class="btn btn-primary">Buy Now</button>
+                <button class="btn" onclick="my_modal_1.showModal()">View in Clover</button>
+                <dialog id="my_modal_1" class="modal">
+                  <div class="modal-box" style="max-width: 800px;">
+                    <iframe src="{{data['results']}}" width="750" height="600"></iframe>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <button class="btn">Close</button>
+                      </form>
                     </div>
                   </div>
-                </div>
+                </dialog>
+                <form action="/submit" method="post">
+                    <textarea class="textarea textarea-bordered" placeholder="{{ data['example'] }}" name="field" rows="10" cols="50">{{ data['example'] }}</textarea>
+                    <br/>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
             % else:
                 <form action="/submit" method="post">
-                    <textarea class="textarea textarea-bordered" placeholder="{{ data['example'] }}" name="field" rows="10" cols="50"></textarea>
+                    <textarea class="textarea textarea-bordered" placeholder="{{ data['example'] }}" name="field" rows="10" cols="50">{{ data['example'] }}</textarea>
                     <br/>
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
