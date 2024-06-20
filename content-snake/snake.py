@@ -1,12 +1,17 @@
 from bottle import Bottle, request, template
 from content_state import encode_content_state
+import random
 
 app = Bottle()
 
 @app.route('/')
 def index():
+    examples = [
+        '{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif/canvas/access/2","type":"Canvas","partOf":[{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif","type":"Manifest"}]}',
+        '{"id":"https://digital.lib.utk.edu/notdereferenceable/assemble/manifest/rftaart/75/canvas/1","type":"Canvas","partOf":[{"id":"https://digital.lib.utk.edu/assemble/manifest/rftaart/75","type":"Manifest"}]}'
+    ]
     data = {
-        'example': '{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif/canvas/access/2","type":"Canvas","partOf":[{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif","type":"Manifest"}]}',
+        'example': random.choice(examples),
         'show_results': False,
         'results': ''
     }
