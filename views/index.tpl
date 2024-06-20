@@ -24,13 +24,13 @@
                     </div>
                   </div>
                 </dialog>
-                <form action="/submit" method="post">
+                <form action="/" method="post">
                     <textarea class="textarea textarea-bordered" placeholder="{{ data['example'] }}" name="field" rows="10" cols="50">{{ data['example'] }}</textarea>
                     <br/>
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
             % else:
-                <form action="/submit" method="post">
+                <form action="/" method="post">
                     <textarea class="textarea textarea-bordered" placeholder="{{ data['example'] }}" name="field" rows="10" cols="50">{{ data['example'] }}</textarea>
                     <br/>
                     <button class="btn btn-primary" type="submit">Submit</button>

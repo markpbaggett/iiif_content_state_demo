@@ -13,7 +13,7 @@ def index():
     return template('index', data=data)
 
 # Route to handle the form submission
-@app.route('/submit', method='POST')
+@app.route('/', method='POST')
 def submit():
     field_data = request.forms.get('field')
     x = encode_content_state(field_data)
