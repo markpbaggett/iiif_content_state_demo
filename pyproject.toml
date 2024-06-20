@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.12"
 bottle = "^0.12.25"
 ibis = "^3.3.0"
+gunicorn = "^22.0.0"
 
 
 [build-system]
