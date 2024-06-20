@@ -10,10 +10,10 @@
 <body>
     <div class="container mx-auto">
         <h1 class="text-4xl text-center">IIIF Content State Demo</h1>
-        <p class="mt-4 text-center">Add IIIF content and load it in Clover with Content State</p>
+        <p class="mt-4 text-center">Add IIIF content and load it in Clover with <a class="secondary" href="https://iiif.io/api/content-state/1.0/">Content State</a></p>
         <div class="text-center">
             % if data['show_results']:
-                <button class="btn" onclick="my_modal_1.showModal()">View in Clover</button>
+                <button class="btn btn-secondary" onclick="my_modal_1.showModal()">View in Clover</button>
                 <dialog id="my_modal_1" class="modal">
                   <div class="modal-box" style="max-width: 800px;">
                     <iframe src="{{data['results']}}" width="750" height="600"></iframe>

@@ -1,9 +1,12 @@
 import base64
 import urllib.parse
+import json
 
 
 def encode_content_state(plain_content_state):
-    uri_encoded = urllib.parse.quote(plain_content_state, safe='')  # equivalent of encodeURIComponent
+    data = json.loads(plain_content_state)
+    compact_json = json.dumps(data, separators=(',', ':'), ensure_ascii=False)
+    uri_encoded = urllib.parse.quote(compact_json, safe='')
     utf8_encoded = uri_encoded.encode("UTF-8")
     base64url = base64.urlsafe_b64encode(utf8_encoded)
     utf8_decoded = base64url.decode("UTF-8")
