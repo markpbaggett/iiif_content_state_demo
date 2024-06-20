@@ -4,16 +4,6 @@ from content_state import encode_content_state
 app = Bottle()
 
 @app.route('/')
-def form():
-    return '''
-        <form action="/submit" method="post">
-            <label for="field">Request</label><br>
-            <textarea id="field" name="field" rows="30" cols="50"></textarea><br>
-            <input value="Submit" type="submit" />
-        </form>
-    '''
-
-@app.route('/check')
 def index():
     data = {
         'example': '{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif/canvas/access/2","type":"Canvas","partOf":[{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif","type":"Manifest"}]}',
