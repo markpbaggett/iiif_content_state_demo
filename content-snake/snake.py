@@ -8,7 +8,8 @@ app = Bottle()
 def index():
     examples = [
         '{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif/canvas/access/2","type":"Canvas","partOf":[{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif","type":"Manifest"}]}',
-        '{"id":"https://digital.lib.utk.edu/notdereferenceable/assemble/manifest/rftaart/75/canvas/1","type":"Canvas","partOf":[{"id":"https://digital.lib.utk.edu/assemble/manifest/rftaart/75","type":"Manifest"}]}'
+        '{"id":"https://digital.lib.utk.edu/notdereferenceable/assemble/manifest/rftaart/75/canvas/1","type":"Canvas","partOf":[{"id":"https://digital.lib.utk.edu/assemble/manifest/rftaart/75","type":"Manifest"}]}',
+        '{"id":"https://raw.githubusercontent.com/markpbaggett/static_iiif/main/manifests/tamu/a0379f2d-2381-4abc-a259-a52bb1ba0b14.json/canvas/5","type":"Canvas","partOf":[{"id":"https://raw.githubusercontent.com/markpbaggett/static_iiif/main/manifests/tamu/a0379f2d-2381-4abc-a259-a52bb1ba0b14.json","type":"Manifest"}]}'
     ]
     data = {
         'example': random.choice(examples),
