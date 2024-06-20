@@ -9,7 +9,7 @@ def index():
     examples = [
         {
             'body': '{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif/canvas/access/2","type":"Canvas","partOf":[{"id":"https://api.dc.library.northwestern.edu/api/v2/works/71153379-4283-43be-8b0f-4e7e3bfda275?as=iiif","type":"Manifest"}]}',
-            'text': 'Open the 3rd Canvas on Zagna Lugna from Northwestern University'
+            'text': 'Open the 3rd Canvas on Zagna "lugna" from Northwestern University'
         },
         {
             'body': '{"id":"https://digital.lib.utk.edu/notdereferenceable/assemble/manifest/rftaart/75/canvas/1","type":"Canvas","partOf":[{"id":"https://digital.lib.utk.edu/assemble/manifest/rftaart/75","type":"Manifest"}]}',
@@ -23,6 +23,10 @@ def index():
         {
             'body': '{"id":"https://digital.lib.utk.edu/assemble/manifest/rftaart/32","type": "Manifest","partOf":[{"id":"https://digital.lib.utk.edu/assemble/collection/collections/rftaart","type": "Collection"}]}',
             'text': 'Open "Dolly Parton Donates" in the Rising from the Ashes Art Collection'
+        },
+        {
+            'body': '{"@context":"http://iiif.io/api/presentation/3/context.json","id":"https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0002-tag","type":"Annotation","motivation":["contentState"],"target":{"id":"https://iiif.io/api/cookbook/recipe/0021-tagging/canvas/p1#xywh=265,661,1260,1239","type": "Canvas","partOf": [{"id":"https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json","type": "Manifest"}]}}',
+            'text': 'Show Tagged Annotation on "Picture of Göttingen taken during the 2019 IIIF Conference"'
         }
     ]
     data = {
