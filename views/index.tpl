@@ -13,12 +13,13 @@
         <p class="mt-4 text-center text-secondary-content" style="padding-bottom: 20px;">Add IIIF content and load it in Clover with <a class="text-info" href="https://iiif.io/api/content-state/1.0/">Content State</a></p>
         <div class="text-center">
             % if data['show_results']:
+
                 <div style="padding-bottom: 20px;">
                     <button class="btn btn-secondary" onclick="my_modal_1.showModal()">View in Clover</button>
                 </div>
                 <dialog id="my_modal_1" class="modal">
-                  <div class="modal-box" style="max-width: 800px;">
-                    <iframe src="{{data['results']}}" width="750" height="600"></iframe>
+                  <div class="modal-box" style="max-width: 1300px;">
+                    <iframe src="{{data['results']}}" width="1200" height="800"></iframe>
                     <div class="modal-action">
                       <form method="dialog">
                         <button class="btn btn-secondary">Close</button>

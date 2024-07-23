@@ -1,5 +1,5 @@
 from bottle import Bottle, request, template
-from .content_state import encode_content_state
+from content_state import encode_content_state
 import random
 
 app = Bottle()
