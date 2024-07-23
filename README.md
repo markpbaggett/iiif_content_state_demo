@@ -11,5 +11,5 @@ poetry install
 ## Run
 
 ```
-python content-snake/snake.py
+gunicorn content-snake.snake:app  
 ```
